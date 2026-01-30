@@ -1,26 +1,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 별점 표시 웹 구성 요소
-    class RatingStars extends HTMLElement {
-        constructor() {
-            super();
-            this.attachShadow({ mode: 'open' });
-        }
+    const readMoreBtn = document.getElementById('read-more-btn');
+    const descriptionContent = document.getElementById('description-content');
 
-        connectedCallback() {
-            const rating = parseFloat(this.getAttribute('data-rating') || 0);
-            const stars = '★'.repeat(Math.round(rating)) + '☆'.repeat(5 - Math.round(rating));
-            this.shadowRoot.innerHTML = `<span>${stars}</span>`;
-        }
-    }
-    customElements.define('rating-stars', RatingStars);
-
-    // 더보기 버튼 기능 (향후 구현)
-    const readMoreButton = document.querySelector('.read-more');
-    if (readMoreButton) {
-        readMoreButton.addEventListener('click', () => {
-            // 상세 설명 표시 로직 추가
-            alert('더보기 기능이 구현될 예정입니다.');
+    if (readMoreBtn && descriptionContent) {
+        readMoreBtn.addEventListener('click', () => {
+            descriptionContent.classList.toggle('expanded');
+            if (descriptionContent.classList.contains('expanded')) {
+                readMoreBtn.textContent = '접기';
+            } else {
+                readMoreBtn.textContent = '더보기';
+            }
         });
     }
+
+    // 별점 표시 기능 (기존 코드 유지)
+    const ratingStars = document.querySelectorAll('.rating-stars');
+    ratingStars.forEach(stars => {
+        const rating = parseInt(stars.dataset.rating);
+        stars.innerHTML = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    });
 });
