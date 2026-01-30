@@ -1,14 +1,60 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-SPOT 안전작업관리 - Google Play 앱</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <main class="app-container">
+        <header class="app-header">
+            <img src="https://play-lh.googleusercontent.com/m-h1-f-mFNM4aDdlaY1A2sXAn-43v_wN43tU88OuaB_wL1sAFEB1c-K2j-TjTsJ49jI=w240-h480-rw" alt="앱 아이콘" class="app-icon">
+            <div class="app-info">
+                <h1>N-SPOT 안전작업관리</h1>
+                <p class="company-name">(주)엔쓰컴퍼니</p>
+                <p class="app-category">비즈니스</p>
+                <div class="app-ratings">
+                    <span>5.0 ★</span>
+                    <span>7개 리뷰</span>
+                    <span>100+</span>
+                </div>
+            </div>
+            <button class="install-button">설치</button>
+        </header>
+
+        <section class="app-screenshots">
+            <div class="screenshot-carousel">
+                <img src="https://play-lh.googleusercontent.com/1-1r9h_n324N2s4-1GZg-fpgl-2AMk2_g2-G2lK_hC6N4N-9_2gH-OA6S-Y_2aF-A=w526-h296-rw" alt="스크린샷 1" class="screenshot">
+                <img src="https://play-lh.googleusercontent.com/9-gq-t-k-y-e-0-g-q-g-e-G-U-s-S-w-M-y-j-A-i-I-j-A-c-E-j-c-w-Q-R-A=w526-h296-rw" alt="스크린샷 2" class="screenshot">
+                <img src="https://play-lh.googleusercontent.com/B-0-K-l-G-I-y-j-g-x-C-m-y-A-X-s-l-J-w-P-z-G-y-y-J-E-r-t-R-k-A=w526-h296-rw" alt="스크린샷 3" class="screenshot">
+                <img src="https://play-lh.googleusercontent.com/n-U-k-L-V-I-g-U-n-h-I-P-K-u-M-w-c-L-F-R-a-u-h-I-D-M-b-k-k-g=w526-h296-rw" alt="스크린샷 4" class="screenshot">
+            </div>
+        </section>
+
+        <section class="app-description">
+            <h2>이 앱 정보</h2>
+            <p>N-SPOT은 안전한 작업 환경을 만들기 위해 최신 기술을 활용하여 작업자의 안전을 실시간으로 모니터링하고 위험을 예방하는 스마트 안전 관리 시스템입니다. 밀폐 공간 작업, 맨홀 작업, 고소 작업 등 다양한 산업 현장에서 작업자의 안전을 보장합니다.</p>
+            <button class="read-more">더보기</button>
+        </section>
+
+        <section class="app-reviews">
+            <h2>평점 및 리뷰</h2>
+            <div class="review-summary">
+                <div class="total-rating">
+                    <span class="rating-value">5.0</span>
+                    <div class="rating-stars" data-rating="5"></div>
+                    <span class="review-count">7개 리뷰</span>
+                </div>
+                <div class="rating-distribution">
+                    <!-- 평점 분포 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
