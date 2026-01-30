@@ -20,30 +20,33 @@ The initial version of the project was a static, single-page website designed to
 
 ---
 
-## Current Plan: Web Application Transformation
+## Version 2: Web Application Transformation
 
-The current goal is to transform the promotional page into a functional, dashboard-style web application for direct use in the browser.
+The promotional page was transformed into a functional, dashboard-style web application for direct use in the browser.
 
-### Target Features & Structure
+### Implemented Features
 
-*   **Application Shell:**
-    *   A responsive, full-page layout.
-    *   A main header with the application title and navigation.
-    *   A primary content area for the dashboard.
-*   **Dashboard UI:**
-    *   A grid-based layout for various monitoring widgets.
-    *   **Worker Status Widget:** A table displaying a list of workers, their locations, and current safety status (e.g., 'Safe', 'Warning', 'Danger') with color-coding.
-    *   **Live Map Widget:** A visual component (initially a static image) representing a map to show worker locations.
-    *   **Environmental Sensors Widget:** A set of cards to display real-time data from environmental sensors like Temperature, Humidity, and Gas Levels.
-    *   **Alerts/Notifications Widget:** A feed to display recent safety alerts and system notifications.
-*   **Styling:**
-    *   A clean, modern, and professional theme suitable for a safety management tool.
-    *   Clear visual hierarchy, use of icons, and color-coding to convey status information effectively.
-    *   The design will be responsive to work on both desktop and mobile browsers.
+*   **Application Shell:** A responsive, full-page layout with a main header and content area.
+*   **Dashboard UI:** A grid-based layout for various monitoring widgets.
+    *   **Worker Status Widget:** A table displaying worker locations and safety status.
+    *   **Live Map Widget:** A visual component representing a map.
+    *   **Environmental Sensors Widget:** Cards displaying real-time sensor data.
+    *   **Alerts/Notifications Widget:** A feed for recent safety alerts.
+*   **Styling:** A clean, modern, and professional theme with clear visual hierarchy and color-coding.
+
+---
+
+## Current Plan: Responsive Web Design Implementation
+
+The current goal is to apply responsive web design principles to the dashboard to ensure it is usable and visually appealing across a wide range of devices, including desktops, tablets, and mobile phones.
 
 ### Action Steps
 
-1.  **Refactor `index.html`:** Remove app store-related sections (Install button, screenshots, reviews, etc.) and implement the new HTML structure for the dashboard.
-2.  **Overhaul `style.css`:** Replace existing styles with new CSS to create the dashboard layout, including styles for the header, grid, widgets/cards, tables, and status indicators.
-3.  **Update `main.js`:** Remove the previous "read-more" button logic. Add any new JavaScript needed for future interactivity.
-4.  **Commit and Push:** Save all changes to the repository.
+1.  **Add Media Queries to `style.css`**:
+    *   Introduce `@media` rules to apply different styles for smaller screen sizes (e.g., screen width <= 768px).
+    *   Adjust the main dashboard grid to a single-column layout on mobile devices.
+    *   Ensure the "Live Map" widget scales correctly and does not dominate the screen on smaller devices.
+    *   Refine typography and spacing for better readability on mobile.
+    *   Adjust the header navigation for smaller screens if necessary.
+2.  **Verify Responsiveness**: Test the layout on different screen sizes using browser developer tools.
+3.  **Commit and Deploy**: Commit the CSS changes and deploy the updated application to Firebase Hosting to make the changes live.
