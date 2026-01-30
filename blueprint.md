@@ -1,24 +1,49 @@
+# Blueprint: N-SPOT Safety Management Web App
 
-# Blueprint: N-SPOT 안전작업관리 웹사이트
+## Overview
 
-## 개요
+This document outlines the design, features, and development plan for the N-SPOT Safety Management web application. The goal is to create a web-based dashboard for real-time monitoring of worker safety at industrial sites.
 
-이 프로젝트는 "N-SPOT 안전작업관리" 애플리케이션의 Google Play 스토어 페이지를 모방한 현대적이고 반응이 빠른 웹사이트를 만드는 것을 목표로 합니다. 이 웹사이트는 애플리케이션의 기능, 스크린샷, 사용자 리뷰를 보여주는 방문 페이지 역할을 합니다.
+## Initial Version: App Store Page
 
-## 디자인 및 기능
+The initial version of the project was a static, single-page website designed to look like a Google Play Store listing for the "N-SPOT" mobile application.
 
-### 구현된 내용:
+### Implemented Features (Initial Version)
 
-*   **반응형 레이아웃:** CSS 그리드와 미디어 쿼리를 사용하여 다양한 화면 크기에 맞게 조정되는 반응형 레이아웃입니다.
-*   **시각적 계층 구조:** 중요한 정보를 강조하기 위해 타이포그래피, 색상 및 간격을 활용한 명확한 시각적 계층 구조입니다.
-*   **웹 구성 요소:** 재사용 가능한 UI 요소를 위한 `rating-stars`와 같은 사용자 지정 웹 구성 요소입니다.
-*   **현대적인 CSS:** 깊이감과 상호 작용을 위한 그림자, 그라데이션 및 CSS 변수입니다.
-*   **이미지 캐러셀:** JavaScript를 사용하여 앱 스크린샷을 보여주는 동적 이미지 캐러셀입니다.
+*   **App Header:** Displayed the app icon, name, company, and category.
+*   **Install Button:** A prominent button to simulate app installation.
+*   **Screenshots:** A horizontal carousel of app screenshots.
+*   **App Description:** A collapsible section with details about the app's features.
+*   **What's New:** A section for version update notes.
+*   **Ratings and Reviews:** A static display of app ratings.
+*   **Developer Contact:** Contact information for the developer.
 
-### 현재 계획:
+---
 
-1.  Google Play 스토어 페이지의 구조와 콘텐츠를 반영하여 `index.html`을 업데이트합니다.
-2.  모바일 우선 접근 방식을 사용하여 애플리케이션의 모양과 느낌을 스타일링하기 위해 `style.css`를 만듭니다.
-3.  스크린샷 갤러리와 같은 대화형 구성 요소를 위한 `main.js`를 구현합니다.
-4.  앱 아이콘 및 스크린샷과 같은 이미지 자산을 추가합니다.
-5.  가독성과 시각적 매력을 높이기 위해 사용자 지정 글꼴을 통합합니다.
+## Current Plan: Web Application Transformation
+
+The current goal is to transform the promotional page into a functional, dashboard-style web application for direct use in the browser.
+
+### Target Features & Structure
+
+*   **Application Shell:**
+    *   A responsive, full-page layout.
+    *   A main header with the application title and navigation.
+    *   A primary content area for the dashboard.
+*   **Dashboard UI:**
+    *   A grid-based layout for various monitoring widgets.
+    *   **Worker Status Widget:** A table displaying a list of workers, their locations, and current safety status (e.g., 'Safe', 'Warning', 'Danger') with color-coding.
+    *   **Live Map Widget:** A visual component (initially a static image) representing a map to show worker locations.
+    *   **Environmental Sensors Widget:** A set of cards to display real-time data from environmental sensors like Temperature, Humidity, and Gas Levels.
+    *   **Alerts/Notifications Widget:** A feed to display recent safety alerts and system notifications.
+*   **Styling:**
+    *   A clean, modern, and professional theme suitable for a safety management tool.
+    *   Clear visual hierarchy, use of icons, and color-coding to convey status information effectively.
+    *   The design will be responsive to work on both desktop and mobile browsers.
+
+### Action Steps
+
+1.  **Refactor `index.html`:** Remove app store-related sections (Install button, screenshots, reviews, etc.) and implement the new HTML structure for the dashboard.
+2.  **Overhaul `style.css`:** Replace existing styles with new CSS to create the dashboard layout, including styles for the header, grid, widgets/cards, tables, and status indicators.
+3.  **Update `main.js`:** Remove the previous "read-more" button logic. Add any new JavaScript needed for future interactivity.
+4.  **Commit and Push:** Save all changes to the repository.

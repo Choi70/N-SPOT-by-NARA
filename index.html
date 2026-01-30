@@ -4,85 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N-SPOT 안전작업관리 - Google Play 앱</title>
+    <title>N-SPOT - 실시간 안전 관제 대시보드</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <main class="app-container">
+    <div class="app-shell">
         <header class="app-header">
-            <img src="https://play-lh.googleusercontent.com/m-h1-f-mFNM4aDdlaY1A2sXAn-43v_wN43tU88OuaB_wL1sAFEB1c-K2j-TjTsJ49jI=w240-h480-rw" alt="앱 아이콘" class="app-icon">
-            <div class="app-info">
-                <h1>N-SPOT 안전작업관리</h1>
-                <p class="company-name">(주)나라디자인</p>
-                <p class="app-category">안전작업관리</p>
-                <div class="app-ratings">
-                    <span>5.0 ★</span>
-                    <span>7개 리뷰</span>
-                    <span>100+</span>
-                </div>
+            <div class="header-title">
+                <span class="material-icons">shield</span>
+                <h1>N-SPOT 안전 관제 대시보드</h1>
             </div>
-            <button class="install-button">설치</button>
+            <nav class="header-nav">
+                <a href="#" class="active">대시보드</a>
+                <a href="#">작업자 관리</a>
+                <a href="#">리포트</a>
+                <a href="#">설정</a>
+            </nav>
         </header>
 
-        <section class="app-screenshots">
-            <div class="screenshot-carousel">
-                <img src="https://play-lh.googleusercontent.com/1-1r9h_n324N2s4-1GZg-fpgl-2AMk2_g2-G2lK_hC6N4N-9_2gH-OA6S-Y_2aF-A=w526-h296-rw" alt="스크린샷 1" class="screenshot">
-                <img src="https://play-lh.googleusercontent.com/9-gq-t-k-y-e-0-g-q-g-e-G-U-s-S-w-M-y-j-A-i-I-j-A-c-E-j-c-w-Q-R-A=w526-h296-rw" alt="스크린샷 2" class="screenshot">
-                <img src="https://play-lh.googleusercontent.com/B-0-K-l-G-I-y-j-g-x-C-m-y-A-X-s-l-J-w-P-z-G-y-y-J-E-r-t-R-k-A=w526-h296-rw" alt="스크린샷 3" class="screenshot">
-                <img src="https://play-lh.googleusercontent.com/n-U-k-L-V-I-g-U-n-h-I-P-K-u-M-w-c-L-F-R-a-u-h-I-D-M-b-k-k-g=w526-h296-rw" alt="스크린샷 4" class="screenshot">
+        <main class="dashboard-grid">
+            <div class="widget worker-status">
+                <h2><span class="material-icons">people</span> 작업자 현황</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>구역</th>
+                            <th>상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>홍길동</td>
+                            <td>A-1 구역</td>
+                            <td><span class="status-dot safe"></span> 안전</td>
+                        </tr>
+                        <tr>
+                            <td>김철수</td>
+                            <td>B-3 구역</td>
+                            <td><span class="status-dot warning"></span> 주의</td>
+                        </tr>
+                        <tr>
+                            <td>이영희</td>
+                            <td>C-2 구역</td>
+                            <td><span class="status-dot danger"></span> 위험</td>
+                        </tr>
+                         <tr>
+                            <td>박성진</td>
+                            <td>A-2 구역</td>
+                            <td><span class="status-dot safe"></span> 안전</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </section>
 
-        <section class="app-description">
-            <h2>이 앱 정보</h2>
-            <div id="description-content" class="collapsed">
-                <p>N-SPOT은 안전한 작업 환경을 만들기 위해 최신 기술을 활용하여 작업자의 안전을 실시간으로 모니터링하고 위험을 예방하는 스마트 안전 관리 시스템입니다. 밀폐 공간 작업, 맨홀 작업, 고소 작업 등 다양한 산업 현장에서 작업자의 안전을 보장합니다.</p>
-                <p><b>주요 기능:</b></p>
+            <div class="widget live-map">
+                <h2><span class="material-icons">map</span> 실시간 현장 지도</h2>
+                <img src="https://via.placeholder.com/600x400.png?text=Factory+Layout+Map" alt="실시간 현장 지도">
+            </div>
+
+            <div class="widget sensor-data">
+                 <h2><span class="material-icons">sensors</span> 주요 환경 센서</h2>
+                 <div class="sensor-grid">
+                    <div class="sensor-card">
+                        <span class="material-icons">thermostat</span>
+                        <p>온도</p>
+                        <span>25.4 °C</span>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="material-icons">water_drop</span>
+                        <p>습도</p>
+                        <span>60 %</span>
+                    </div>
+                    <div class="sensor-card">
+                        <span class="material-icons">masks</span>
+                        <p>산소(O₂)</p>
+                        <span>20.9 %</span>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="widget alerts">
+                <h2><span class="material-icons">notifications</span> 최신 알림</h2>
                 <ul>
-                    <li>- 실시간 작업자 위치 및 상태 모니터링</li>
-                    <li>- 위험 구역 접근 시 자동 경고 알림</li>
-                    <li>- 긴급 상황 발생 시 SOS 호출 및 신속 대응</li>
-                    <li>- 작업 환경(가스 농도, 온도 등) 데이터 분석</li>
-                    <li>- 안전 데이터 기반의 통계 및 보고서 생성</li>
+                    <li><span class="alert-icon danger">●</span> C-2 구역 이영희 작업자, 높은 가스 농도 감지.</li>
+                    <li><span class="alert-icon warning">●</span> B-3 구역 김철수 작업자, 지정 구역 이탈.</li>
+                    <li><span class="alert-icon info">●</span> A-1 구역 카메라 연결 복구됨.</li>
                 </ul>
-                <p>N-SPOT과 함께 더 안전하고 효율적인 작업 환경을 만들어가세요.</p>
             </div>
-            <button id="read-more-btn" class="read-more">더보기</button>
-        </section>
-
-        <section class="whats-new">
-            <h2>새로운 기능</h2>
-            <p>버전 1.2.5 업데이트</p>
-            <ul>
-                <li>- UI/UX 개선 및 안정성 향상</li>
-                <li>- 경미한 버그 수정</li>
-            </ul>
-        </section>
-
-        <section class="app-reviews">
-            <h2>평점 및 리뷰</h2>
-            <div class="review-summary">
-                <div class="total-rating">
-                    <span class="rating-value">5.0</span>
-                    <div class="rating-stars" data-rating="5"></div>
-                    <span class="review-count">7개 리뷰</span>
-                </div>
-                <div class="rating-distribution">
-                    <!-- 평점 분포 -->
-                </div>
-            </div>
-        </section>
-
-        <section class="developer-contact">
-            <h2>개발자 연락처</h2>
-            <p>웹사이트: <a href="http://www.nth.co.kr" target="_blank">www.nth.co.kr</a></p>
-            <p>이메일: <a href="mailto:sales@nth.co.kr">sales@nth.co.kr</a></p>
-            <p>주소: 경기도 성남시 수정구 창업로 42, 528호</p>
-        </section>
-
-    </main>
-
+        </main>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
